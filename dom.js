@@ -13,14 +13,23 @@ function uusi() {
 
     // Luodaan uusi listaus syötekentän pohjalta, mikäli syöte ei ole tyhjä
 
+    // Luodaan ensin checkbox listaukselle
+    var checkBox = document.createElement("input")
+    checkBox.type ="checkbox";
+    // Luodaan lista-elementti
     var li = document.createElement("li");
     var x = document.getElementById("syote").value;
     var y = document.createTextNode(x);
+    // Liitetään syöte ja checkbox listaukseen
     li.appendChild(y);
+    li.appendChild(checkBox);
 
     if (x.length < 3) {
         document.getElementById("syote").placeholder = "Syötteen täytyy olla vähintään kolmen merkin pituinen..";
         alert("Syöte on liian lyhyt.");
+    } else if (x.length > 15) {
+        document.getElementById("syote").placeholder = "Syötteen täytyy olla alle 15 merkkiä pitkä.";
+        alert("Syöte on liian pitkä");
     } else {
         // Uusi yksittäinen listaus lisätään koko listaan
         document.getElementById("lista").appendChild(li);
