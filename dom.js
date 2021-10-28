@@ -15,7 +15,7 @@ function uusi() {
 
     // Luodaan ensin checkbox listaukselle
     var checkBox = document.createElement("input")
-    checkBox.type ="checkbox";
+    checkBox.type = "checkbox";
     // Luodaan lista-elementti
     var li = document.createElement("li");
     var x = document.getElementById("syote").value;
