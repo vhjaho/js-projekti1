@@ -70,8 +70,10 @@ function uusi() {
         }
     }
 
-    // Varastoidaan lista local storageen
-    list = document.getElementById("lista");
-    localStorage.setItem("todolist", list.innerHTML);
+    // Varastoidaan lista local storageen vanhojen listausten kanssa
+    var ulist = document.getElementById("lista").innerHTML;
+    ulist = ulist + localStorage.getItem("todolist");
+    localStorage.setItem("todolist", ulist);
+
 
 }
