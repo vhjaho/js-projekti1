@@ -10,12 +10,23 @@ for (i = 0; i < sulje.length; i++) {
     }
 }
 
+// Valitaan kaikki listaukset, jotka ovat suoritettuja ja poistetaan ne
+function poista() {
+    var p = document.querySelectorAll('.checki');
+    for (i = 0; i < p.length; i++) {
+        if (p[i].checked) {
+            p[i].parentElement.style.display = "none";
+        }
+    }
+}
+
 function uusi() {
 
     // Luodaan uusi listaus syötekentän pohjalta
 
     // Luodaan ensin checkbox listaukselle
     var checkBox = document.createElement("input")
+    checkBox.className = "checki";
     checkBox.type = "checkbox";
     // Luodaan lista-elementti
     var li = document.createElement("li");

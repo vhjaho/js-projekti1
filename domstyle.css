@@ -70,6 +70,21 @@ input[id="syote"] {
     border-radius: 0;
 }
 
+.poista {
+  border: solid;
+  border-color: red;
+  padding: 10px;
+  width: 20%;
+  background: lightgray;
+  color: black;
+  float: right;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
 input[type="checkbox"] {
   position: absolute;
   left: 5;
